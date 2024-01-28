@@ -1,0 +1,53 @@
+<div class="p-8 bg-transparent">
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 text-white text-3xl font-bold">
+        <!-- bg-black py-10 opacity-80 p-8 rounded-xl shadow-md w-96 border text-white -->
+        
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8 border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500" [routerLink]="'/addCustomer'">
+            <p class="">Add Customer</p>
+        </div>
+        
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Add Product</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Do Sales</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Update Stocks</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Check Stocks</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Sales Report</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Product Report</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Update-Customer</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500">
+            <p class="">Update-Product</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500" [routerLink]="'/checkCustomers'">
+            <p class="">Your Customers</p>
+        </div>
+
+        <div class="relative bg-black bg-opacity-80 p-8 flex items-center justify-center border-b-8  border-b-gray-200 shadow-md rounded-xl cursor-pointer hover:border-b-green-500" [routerLink]="'/addAddress'">
+            <p class="">Add Address</p>
+        </div>
+    </div>
+    <!-- Ynha router outlet dale hai or ts file me routerOutlet or routerModule Daale hai -->
+    <router-outlet></router-outlet>
+</div>
+<!-- Ynha dalne pe bhi whi kaam kr rha hai -->
+<!-- <router-outlet></router-outlet> -->

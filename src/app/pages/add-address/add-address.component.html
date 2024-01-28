@@ -1,0 +1,40 @@
+
+<div class="font-sans p-8">
+    <!-- items-center krne se pura beech me aa jata hai -->
+    <!-- h-fit se height set hota hai div ka or w-fit se width -->
+   <div class="h-fit w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:w-full">
+    <!-- // lg:w-1/2 - ye lgane se left wala div chota ho gya  -->
+    <div class=" w-full h-fit bg-violet-300 bg-opacity-80 p-8 shadow-md rounded-xl">
+    
+        <h2 class="text-lg font-bold mb-2">Available Address for you : </h2>
+        <ul class="text-red-500 font-semibold">
+          @for (address of allAddresses; track $index) {
+            <li>{{address}}</li>
+          }
+        </ul>
+      </div>
+    <div class="bg-black bg-opacity-80 p-8 shadow-md w-full  h-fit text-white rounded-xl ">
+      <h2 class="text-2xl font-bold mb-6  underline flex justify-center">Add New Address</h2>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="mb-4">
+          <label for="address_fullAddress" class="block  text-sm font-bold mb-2">Address</label>
+          <input type="text" id="address_fullAddress" name="address_fullAddress" formControlName="address_fullAddress" class="w-full p-2 border text-black border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="supplier_uid" class="block  text-sm font-bold mb-2">Supplier Id</label>
+          <input type="text" id="supplier_uid" name="supplier_uid" formControlName="supplier_uid" class="w-full p-2 border text-black border-gray-300 rounded">
+        </div>
+    </div>
+    <div class="flex justify-center" >
+        <button type="submit" class="bg-blue-500 py-2 px-4 rounded hover:bg-blue-700">Add Customer</button>
+    </div>
+      </form>
+      <div *ngIf="apiResponse !== null" class="mt-4 flex justify-center">
+        <p class="text-green-500 text-xl  ">{{ apiResponse }}</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
