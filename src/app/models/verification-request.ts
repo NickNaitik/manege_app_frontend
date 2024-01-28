@@ -1,6 +1,6 @@
 export interface VerificationRequest {
 
-    email?: string,
+    supplier_id?: string,
     code?: string
 
 }
