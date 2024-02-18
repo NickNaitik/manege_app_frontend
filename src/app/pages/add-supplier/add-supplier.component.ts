@@ -21,6 +21,7 @@ export class AddSupplierComponent  implements OnInit {
   apiResponse: String | null = null; // Variable to hold the API response
   tokenResponse: TokenResponse = {};
   tokenResponse1: TokenResponse = {};
+  supplierID: any;
 
   constructor(private fb: FormBuilder, private http: HttpClient, private _api:ApiCallService, private router:Router) {}
 
@@ -48,6 +49,9 @@ export class AddSupplierComponent  implements OnInit {
       const formData = this.myForm.value;
       console.log(formData)
       
+      sessionStorage.setItem('supplier_ID', formData.supplier_uid as string);
+      this.supplierID=sessionStorage.getItem('supplier_ID');
+      console.log("Supplied ID : "+this.supplierID);
       this.addSupplier(formData);
     }
   }
@@ -57,6 +61,8 @@ export class AddSupplierComponent  implements OnInit {
     if(this.verifyForm.valid) {
 
       const formData1 = this.verifyForm.value;
+      
+
       this.verifyCode(formData1); 
     }
     }
